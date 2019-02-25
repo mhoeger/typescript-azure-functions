@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "func",
+      "command": "host start",
+      "problemMatcher": "$func-watch",
+      "isBackground": true,
+      "dependsOn": "npm: build"
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "dependsOn": [
+        "func: extensions install",
+        "npm: install"
+      ],
+      "problemMatcher": "$tsc"
+    },
+    {
+      "type": "shell",
+      "label": "prune",
+      "command": "npm prune --production",
+      "dependsOn": "npm: build",
+      "problemMatcher": []
+    }
+  ]
+}
