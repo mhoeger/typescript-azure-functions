@@ -6,6 +6,7 @@ This is an example of a simple function app written in TypeScript. Most of the c
   - Install latest [azure-functions-core-tools](https://www.npmjs.com/package/azure-functions-core-tools) if you do not already have it.
     - `npm install -g azure-functions-core-tools` 
   - Run `npm install` from project root to install dev dependencies. 
+  - Run `func azure functionapp fetch-app-settings <functionAppName>` where `<functionAppName>` is a function app you created in the Azure Portal. 
 
 ## The basics
 ### Build
